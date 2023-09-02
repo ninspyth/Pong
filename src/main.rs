@@ -9,7 +9,7 @@ const PADDLE_SCALE_Y: f32 = 100.0;
 const PADDLE_SPEED: f32 = 450.0;
 const WW: f32 = 1280.0;
 const WH: f32 = 720.0;
-const BALL_SPEED: f32 = 400.0;
+const BALL_SPEED: f32 = 500.0;
 const BALL_RADIUS: f32 = 10.0;
 
 
