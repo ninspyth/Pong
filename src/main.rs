@@ -135,6 +135,20 @@ fn setup(
     ));
 
     //spawn ball
+    let x: f32 = random::<f32>();
+    let y: f32 = random::<f32>();
+    let x = if x>y {
+        x
+    }
+    else {
+        y
+    };
+    let y = if x>y {
+        x
+    }
+    else {
+        y
+    };
     commands.spawn((
         MaterialMesh2dBundle {
             mesh: meshes.add(shape::Circle::new(BALL_RADIUS).into()).into(),
@@ -143,7 +157,7 @@ fn setup(
             ..default()
         },
         Ball {
-            direction: Vec2::new(random::<f32>(), random::<f32>()).normalize()
+            direction: Vec2::new(x, y).normalize()
         }
     ));
 
