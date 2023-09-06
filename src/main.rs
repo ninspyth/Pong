@@ -279,7 +279,7 @@ fn ball_movement(
             transform.translation += direction * BALL_SPEED * time.delta_seconds();
             
             //collision ball and wall
-            if transform.translation.y <= -(WH/2.0 - BALL_RADIUS) {
+            if transform.translation.y <= -(WH/2.0 - BALL_RADIUS/2.0) {
                 ball.direction.y = -ball.direction.y;
             }
             if transform.translation.y >= (WH/2.0 - BALL_RADIUS) {
